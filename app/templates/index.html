@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <title>GetGrass WebUI</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">GetGrass WebUI</a>
+        <span class="navbar-text">
+            Online: <span class='status-2' id="onlineCount">0</span>/<span id="allCount">20</span>
+        </span>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary" onclick="addUser()">Add user</button>
+                <button class="btn btn-danger" onclick="deleteAllUser()">Delete user</button>
+                <button class="btn btn-success" onclick="uploadFile()">Add file</button>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <table class="table table-striped" id="data-table">
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>User ID</th>
+                            <th>Proxy</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Veriler buraya dinamik olarak eklenecek -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="logsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="logText"></p>
+        </div>
+    </div>
+
+    <script src="../static/js/index.js"></script>
+</body>
+</html>
